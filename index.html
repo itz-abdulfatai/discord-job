@@ -37,18 +37,29 @@
 </head>
 
   <body class="text-secondary bg-[#fbf9fc]">
+    <!-- Top header: Logo, Navigation and Auth buttons -->
     <header class=" w-full h-10 gap-10 flex justify-between max-w-[1440px] mx-auto shadow-md px-10 py-10 items-center  text-white ">
         <img src="images/image.png" alt="logo" class="object-cover w-20">
-        <nav class=" flex flex-1 gap-5">
-            <div>
+        <nav class=" flex flex-1 gap-5 max-md:hidden">
+            <div class="relative nav-has-child">
 
                 <a href="" class="font-semibold text-secondary">Product</a>
                 <i class='bx bx-chevron-down text-secondary font-bold'></i>
+                <div class=" mini-header flex text-secondary hidden flex-col absolute border border-secondary rounded-xl  bg-white min-w-max top-8" >
+                  <a href="" class="px-5 py-1">What is Adwave?</a>
+                  <a href="" class="px-5 py-1">Showcase</a>
+                  <a href="" class="px-5 py-1">News</a>
+                </div>
             </div>
-            <div>
+            <div class="relative nav-has-child">
 
                 <a href="" class="font-semibold text-secondary">Resources</a>
                 <i class='bx bx-chevron-down text-secondary font-bold'></i>
+                <div class=" mini-header flex text-secondary hidden flex-col absolute border border-secondary rounded-xl  bg-white min-w-max top-8" >
+                  <a href="" class="px-5 py-1">What is Adwave?</a>
+                  <a href="" class="px-5 py-1">Showcase</a>
+                  <a href="" class="px-5 py-1">News</a>
+                </div>
             </div>
             <div>
 
@@ -60,15 +71,15 @@
             <button class="px-8 py-1 border border-secondary rounded-full bg-gradient-to-r from-gradient-x to-gradient-y ">login</button>
         </div>
     </header>
-
-    <section class="flex justify-between h-screen mt-32 px-5 md:px-10 lg:px-14">
-      <div class="flex flex-col gap-10 w-[55%] ">
-        <div class="flex items-center">
-          <img src="images/image.png" alt="">
-          <h1 class="text-5xl font-semibold">ADWAVE</h1>
+    <!-- hero section  -->
+    <section class="flex flex-col md:flex-row justify-between h-screen mt-32 px-8 md:px-10 lg:px-14">
+      <div class="flex flex-col gap-10 max-md:text-center max-md:items-center md:w-[55%] ">
+        <div class="flex items-center max-md:gap-5">
+          <img src="images/image.png" alt="" class="max-md:w-24">
+          <h1 class=" text-3xl md:text-5xl font-semibold">ADWAVE</h1>
         </div>
 
-        <div class="flex flex-col gap-5  items-start">
+        <div class="flex flex-col gap-5  items-start max-md:items-center">
           <h2 class="text-2xl md:text-4xl font-bold leading-[30px]">
         Create and launch a TV ad in minutes for 
       </h2>
@@ -85,26 +96,28 @@
       </div>
       <div class="w-full flex justify-center items-center">
 
-        <img src="images/hero-1.png" class="w-[650px]" alt="">
+        <img src="images/hero-1.png" class="w-full max-w-[450px] lg:max-w-[600px]" alt="">
       </div>
     </section>
-    <section class="h-[300px] flex justify-between">
-      <img src="images/brand-1.png" alt="" class="h-20">
-      <img src="images/brand-2.png" alt="" class="h-20">
-      <img src="images/brand-3.png" alt="" class="h-20">
-      <img src="images/brand-4.png" alt="" class="h-20">
-      <img src="images/brand-5.png" alt="" class="h-20">
-      <img src="images/brand-6.png" alt="" class="h-20">
 
-
+    <!-- Trusted brands -->
+    <section class="py-10 px-4 sm:px-5 md:px-10 lg:px-14 flex flex-wrap justify-center gap-x-6 gap-y-4">
+      <img src="images/brand-1.png" alt="Brand logo 1" class="h-12 sm:h-16 object-contain">
+      <img src="images/brand-2.png" alt="Brand logo 2" class="h-12 sm:h-16 object-contain">
+      <img src="images/brand-3.png" alt="Brand logo 3" class="h-12 sm:h-16 object-contain">
+      <img src="images/brand-4.png" alt="Brand logo 4" class="h-12 sm:h-16 object-contain">
+      <img src="images/brand-5.png" alt="Brand logo 5" class="h-12 sm:h-16 object-contain">
+      <img src="images/brand-6.png" alt="Brand logo 6" class="h-12 sm:h-16 object-contain">
     </section>
 
+    <!-- Success stories cards -->
+    <section class="px-5 md:px-10 lg:px-14 flex max-md:text-center flex-col gap-5 ">
+      <h2 class="text-3xl sm:text-4xl font-bold max-md:text-center">Success stories</h2>
+      <h3 class="text-lg sm:text-xl">
+          See how real businesses reached new audiences through TV advertising
+        </h3>
 
-    <section class="px-5 md:px-10 lg:px-14 flex flex-col gap-5 ">
-      <h2 class="text-3xl font-bold ">Success stories</h2>
-      <h3 class="text-lg ">See how real businesses reached new audiences throughh tv advertising</h3>
-
-      <div class="flex gap-4">
+      <div class="flex flex-col lg:flex-row gap-4 mt-6">
         <div class="h-[300px] bg-secondary text-white border-2 w-[250px] p-4 rounded-3xl flex flex-col gap-5">
           <div class="flex justify-end gap-2 ">
             <i class='bx bxs-chevron-left-circle' ></i>
@@ -120,133 +133,207 @@
 
     </section>
 
-
-    <section class="px-5 md:px-10 lg:px-14 flex flex-col gap-10 border py-20 bg-gradient-to-b from-transparent to-[#63babd55] from-[90%] bg-opacity-20">
-      <div class="flex justify-between">
-      <h2 class="text-3xl font-bold ">Success stories</h2>
-      <div class="flex items-center gap-3">
-        <h2 class="text-2xl font-bold ">Learn more</h2>
-            <i class='bx bxs-chevron-right-circle text-secondary text-xl' ></i>
-
-
-      </div>
-
-      </div>
-
-      <div class="items-end justify-between flex ">
-
-        
-        <div class="flex flex-col items-center ">
-          <img src="images/little-1.png" alt="">
-          <p class="text-xl font-semibold">Enter your website</p>
+    <!-- How it works section -->
+      <section
+        class="px-4 sm:px-5 md:px-10 lg:px-14 flex flex-col gap-10 py-20 bg-gradient-to-b from-transparent to-[#63babd1a] from-[90%]"
+      >
+        <div
+          class="flex justify-between items-center"
+        >
+          <h2 class="text-3xl sm:text-4xl font-bold">How it works</h2>
+          <a
+            href="#"
+            class="flex items-center gap-2 text-xl font-bold hover:text-yellw transition-colors "
+          >
+            Learn more
+            <i class="bx bxs-chevron-right-circle text-2xl hover:translate-x-1"></i>
+          </a>
         </div>
-      <div class="flex flex-col items-center">
-        <img src="images/little-2.png" alt="">
-        <p class="text-xl font-semibold">Ai generates your Ad</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="images/little-3.png" alt="">
-        <p class="text-xl font-semibold">Launch your ad on TV</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="images/little-4.png" alt="">
-        <p class="text-xl font-semibold">Track your ad performance</p>
-      </div>
-      
-    </div>
 
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center text-center"
+        >
+          <div class="flex flex-col items-center gap-3">
+            <img
+              src="images/little-1.png"
+              alt="Step 1: Enter your website"
+              class="h-20 w-20 object-contain"
+            />
+            <p class="text-lg sm:text-xl font-semibold">Enter your website</p>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <img
+              src="images/little-2.png"
+              alt="Step 2: AI generates your ad"
+              class="h-20 w-20 object-contain"
+            />
+            <p class="text-lg sm:text-xl font-semibold">AI generates your Ad</p>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <img
+              src="images/little-3.png"
+              alt="Step 3: Launch your ad on TV"
+              class="h-20 w-20 object-contain"
+            />
+            <p class="text-lg sm:text-xl font-semibold">Launch your ad on TV</p>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <img
+              src="images/little-4.png"
+              alt="Step 4: Track your ad performance"
+              class="h-20 w-20 object-contain"
+            />
+            <p class="text-lg sm:text-xl font-semibold">
+              Track your ad performance
+            </p>
+          </div>
+        </div>
 
-    <div class="flex justify-center -mb-20">
-      <img src="images/cardss.png" class="w-[700px]" alt="">
-    </div>
+        <div class="flex justify-center -mb-20 mt-10">
+          <img
+            src="images/cardss.png"
+            class="w-full max-w-[700px] object-contain"
+            alt="Dashboard screenshot"
+          />
+        </div>
+      </section>
 
-    </section>
+    <!-- Pricing estimator -->
+    <section class="px-5 flex flex-col md:flex-row max-md:mt-10 max-md:text-center  min-h-[550px] w-screen mx-auto">
 
-
-    <section class="px-5 flex  min-h-[550px] w-screen mx-auto">
-
-      <div class="w-full text-white flex flex-col gap-5 bg-pricingBg p-14  ">
-      <h2 class="text-3xl font-bold ">Success stories</h2>
+      <div class="w-full text-white flex flex-col gap-5 bg-pricingBg p-8 md:p-14 rounded-top-3xl md:rounded-top-0 md:rounded-l-3xl">
+      <h2 class="text-3xl font-bold "> Pricing tailored to you </h2>
       <p>
-        You can start advertising for as little as $50, with flexible budgets tailored to meet your marketing goals. Use the slider below to see how much more you could be doing with your advertising budget.
+         You can start advertising for as little as $50, with flexible budgets tailored to meet your marketing goals. Use the slider below to see how much more you could be doing with your advertising budget. 
       </p>
-            <input type="text" class=" bg-transparent border-[1.5px] text-center border-white px-10 py-5 rounded-full outline-none placeholder:text-center" placeholder="Enter your website">
+            <!-- Synced Input Field -->
+<div class="relative w-full">
+  <input
+    id="budgetInput"
+    type="text"
+    class="bg-transparent border-[1.5px] border-white px-10 py-5 rounded-full outline-none w-full"
+    placeholder=""
+  />
+  <span class="absolute right-6 top-1/2 -translate-y-1/2 text-white font-semibold">USD</span>
+</div>
 
-            <input type="range">
-            <div class="flex justify-between -mt-5">
-              <span>
-                $50
-              </span>
-              <span>$1,000,000</span>
-            </div>
+<!-- Price Slider -->
+<input id="budgetRange" type="range" min="50" max="1000000" step="50"  class="range-slider mt-5"/>
 
-      </div>
-      <div class="w-full bg-gradient-to-bl from-gradient-x to-gradient-y flex flex-wrap p-14 justify-between items-center">
-        <div class="w-[50%] flex flex-col text-center gap-3 items-center">
-          <span>estimated viewers</span>
-          <p class="text-4xl font-semibold">5k - 30k</p>
-        </div>
-        <div class="w-[50%] flex flex-col text-center gap-3 items-center">
-          <span>Average daily viewers</span>
-          <p class="text-4xl font-semibold">150 - 400</p>
-        </div>
-        <div class="w-[50%] flex flex-col text-center gap-3 items-center">
-          <span>Estimated cost per 1000 impressions</span>
-          <p class="text-4xl font-semibold">$15 - $35</p>
-        </div>
-        <div class="w-[50%] flex flex-col text-center gap-3 items-center">
-          <span>Estimated website traffic increase</span>
-          <p class="text-4xl font-semibold">100+ users</p>
-        </div>
-        <div class="w-[50%] flex flex-col text-center gap-3 items-center">
-          <span>some other thing</span>
-          <p class="text-4xl font-semibold">475%</p>
-        </div>
-        <div class="w-[50%] flex flex-col text-center gap-3 items-center">
-          <span>Another thing</span>
-          <p class="text-4xl font-semibold">100 things</p>
-        </div>
+<!-- Static Labels -->
+<div class="flex justify-between">
+  <span>$50</span>
+  <span>$1,000,000</span>
+</div>
+
+<p class="italic mt-10">
+  All results shown are estimates. Actual results will vary by audience and location.
+</p>
 
 
       </div>
+        <div
+          class="w-full bg-gradient-to-bl from-gradient-x to-gradient-y flex flex-wrap p-8 sm:p-14 justify-between items-center rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl text-secondary"
+        >
+          <div
+            class="w-full sm:w-1/2 flex flex-col text-center gap-2 mb-4 sm:mb-0"
+          >
+            <span class="text-sm sm:text-base">Estimated viewers</span>
+            <p id="estimatedViewers" class="text-3xl sm:text-4xl font-semibold">
+              5k - 30k
+            </p>
+          </div>
+          <div
+            class="w-full sm:w-1/2 flex flex-col text-center gap-2 mb-4 sm:mb-0"
+          >
+            <span class="text-sm sm:text-base">Average daily viewers</span>
+            <p id="dailyViewers" class="text-3xl sm:text-4xl font-semibold">
+              150 - 400
+            </p>
+          </div>
+          <div
+            class="w-full sm:w-1/2 flex flex-col text-center gap-2 mb-4 sm:mb-0"
+          >
+            <span class="text-sm sm:text-base"
+              >Estimated cost per 1000 impressions</span
+            >
+            <p id="cpm" class="text-3xl sm:text-4xl font-semibold">$15 - $35</p>
+          </div>
+          <div
+            class="w-full sm:w-1/2 flex flex-col text-center gap-2 mb-4 sm:mb-0"
+          >
+            <span class="text-sm sm:text-base"
+              >Estimated website traffic increase</span
+            >
+            <p id="trafficIncrease" class="text-3xl sm:text-4xl font-semibold">
+              100+ users
+            </p>
+          </div>
+          <div
+            class="w-full sm:w-1/2 flex flex-col text-center gap-2 mb-4 sm:mb-0"
+          >
+            <span class="text-sm sm:text-base"
+              >Customer acquisition increase</span
+            >
+            <p
+              id="acquisitionIncrease"
+              class="text-3xl sm:text-4xl font-semibold"
+            >
+              475%
+            </p>
+          </div>
+          <div class="w-full sm:w-1/2 flex flex-col text-center gap-2">
+            <span class="text-sm sm:text-base">Campaign reach</span>
+            <p id="campaignReach" class="text-3xl sm:text-4xl font-semibold">
+              Local
+            </p>
+          </div>
+        </div>
 
     </section>
 
-
+        <!-- FAQ section -->
      <section class=" mx-auto flex flex-col sm:flex-row gap-8 min-h-[70vh] p-20">
     <div class="sm:w-1/3">
       <h2 class="text-3xl font-bold leading-snug mb-2">Frequently Asked<br/>Questions</h2>
-      <a href="#" class="text-lg font-semibold mt-4 inline-flex items-center hover:underline gap-5">
-        All FAQs             <i class='bx bxs-chevron-right-circle' ></i>
+      <a href="#" class="text-lg font-semibold mt-4 inline-flex items-center hover:text-yellw transition-all gap-5 group">
+        All FAQs             <i class='bx bxs-chevron-right-circle group-hover:translate-x-1' ></i>
 
       </a>
     </div>
 
-    <div class="sm:w-2/3 space-y-4">
-      <div class="border border-[#3a3a4e] rounded-full px-6 py-4 cursor-pointer transition-all duration-300" onclick="toggleFAQ(this)">
-        <h3 class="text-lg font-semibold">How does Adwave work?</h3>
-        <p class="mt-2 text-sm hidden">Adwave helps you create and run ads on multiple platforms with ease using AI and data insights.</p>
-      </div>
-
-      <div class="border border-[#3a3a4e] rounded-full px-6 py-4 cursor-pointer transition-all duration-300" onclick="toggleFAQ(this)">
-        <h3 class="text-lg font-semibold">What does it cost to run an ad on TV?</h3>
-        <p class="mt-2 text-sm hidden">TV ad pricing varies based on channel, time, and location. Contact us for a quote tailored to your budget.</p>
-      </div>
-
-      <div class="border border-[#3a3a4e] rounded-full px-6 py-4 cursor-pointer transition-all duration-300" onclick="toggleFAQ(this)">
-        <h3 class="text-lg font-semibold">Where do my ads run?</h3>
-        <p class="mt-2 text-sm hidden">Your ads can appear on streaming platforms, local or national TV, and digital channels depending on your selection.</p>
-      </div>
+<div class="sm:w-2/3 space-y-4">
+  <div class="faq-item border border-[#3a3a4e] rounded-full px-6 py-4 cursor-pointer transition-all duration-300  " onclick="toggleFAQ(this)">
+    <h3 class="text-lg font-semibold">How does Adwave work?</h3>
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+      <p class="mt-2 text-sm">Adwave helps you create and run ads on multiple platforms with ease using AI and data insights.</p>
     </div>
+  </div>
+
+  <div class="faq-item border border-[#3a3a4e] rounded-full px-6 py-4 cursor-pointer transition-all duration-300  " onclick="toggleFAQ(this)">
+    <h3 class="text-lg font-semibold">What does it cost to run an ad on TV?</h3>
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+      <p class="mt-2 text-sm">TV ad pricing varies based on channel, time, and location. Contact us for a quote tailored to your budget.</p>
+    </div>
+  </div>
+
+  <div class="faq-item border border-[#3a3a4e] rounded-full px-6 py-4 cursor-pointer transition-all duration-300  " onclick="toggleFAQ(this)">
+    <h3 class="text-lg font-semibold">Where do my ads run?</h3>
+    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+      <p class="mt-2 text-sm">Your ads can appear on streaming platforms, local or national TV, and digital channels depending on your selection.</p>
+    </div>
+  </div>
+</div>
+
   </section>
 
-
+    <!--  Content highlights -->
     <section class="px-5 md:px-10 lg:px-14 flex flex-col gap-10 border py-20">
       <div class="flex justify-between">
       <h2 class="text-3xl font-bold ">Success stories</h2>
-      <div class="flex items-center gap-3">
-        <h2 class="text-2xl font-bold ">Learn more</h2>
-            <i class='bx bxs-chevron-right-circle text-secondary text-xl' ></i>
+      <div class="flex items-center gap-3 group transition-all">
+        <h2 class="text-2xl  font-bold group-hover:text-yellw transition-all">Learn more</h2>
+            <i class='bx bxs-chevron-right-circle text-secondary text-xl group-hover:text-yellw transition-all group-hover:translate-x-1' ></i>
 
 
       </div>
@@ -292,7 +379,7 @@ goals.</p>
 
 
     </section>
-
+      <!-- Testimonials section -->
     <section class="p-20 bg-[#f9f8fc] font-sans">
   <h2 class="text-4xl font-extrabold mb-10 leading-tight">Testimonials</h2>
 
@@ -320,7 +407,7 @@ goals.</p>
 </section>
 
 
-
+  <!-- site footer -->
     <footer class="flex flex-col mt-32 px-5 md:px-10 lg:px-14">
 <div class="flex justify-around pb-10">
   <div>        
@@ -342,7 +429,7 @@ goals.</p>
   <div class="flex flex-col gap-5">
     <h4 class="text-xl font-bold">Product</h4>
     <a href="" class=" capitalize">Resources</a>
-    <a href="" class=" capitalize">FAQs/a>
+    <a href="" class=" capitalize">FAQs</a>
     <a href="" class=" capitalize">Get support</a>
   </div>
   <div class="flex flex-col gap-5">
@@ -351,20 +438,41 @@ goals.</p>
     <a href="" class=" capitalize">news room</a>
   </div>
 </div>
-<div class="flex text-white justify-between items-center  px-8 py-4 bg-secondary -mx-10">
-  <nav class=" flex flex-l gap-10">
-    <span>&copy; 2025 Adwave digital, Inc.</span>
-    <a href="" class="font-normal text-base">Terms</a>
-    <a href="" class="font-normal text-base">Privacy (Updated 05/2025)</a>
-    <a href="" class="font-normal text-base">Sitemap</a>
-    <a href="" class="font-normal text-base">Manage Cookies</a>
-  </nav>
-  <div class=" items-center flex gap-3 text-white">
-<i class='bx bxl-linkedin-square'></i>
-<i class='bx bxl-twitter'></i>
-
-  </div>
-</div>
+      <div
+        class="flex flex-col sm:flex-row text-white justify-between items-center px-4 py-4 bg-secondary -mx-4 sm:-mx-5 md:-mx-10 lg:-mx-14 rounded-b-lg sm:rounded-b-none"
+      >
+        <nav
+          class="flex flex-col sm:flex-row gap-2 sm:gap-10 text-center sm:text-left mb-4 sm:mb-0"
+        >
+          <span class="text-sm sm:text-base"
+            >&copy; 2025 Adwave Digital, Inc.</span
+          >
+          <a href="#" class="font-normal text-sm sm:text-base hover:underline"
+            >Terms</a
+          >
+          <a href="#" class="font-normal text-sm sm:text-base hover:underline"
+            >Privacy (Updated 05/2025)</a
+          >
+          <a href="#" class="font-normal text-sm sm:text-base hover:underline"
+            >Sitemap</a
+          >
+          <a href="#" class="font-normal text-sm sm:text-base hover:underline"
+            >Manage Cookies</a
+          >
+        </nav>
+        <div class="flex gap-3 text-white text-2xl">
+          <a href="#" aria-label="LinkedIn"
+            ><i
+              class="bx bxl-linkedin-square hover:text-accent-mini transition-colors"
+            ></i
+          ></a>
+          <a href="#" aria-label="Twitter"
+            ><i
+              class="bx bxl-twitter hover:text-accent-mini transition-colors"
+            ></i
+          ></a>
+        </div>
+      </div>
 
 </footer>
 
@@ -375,28 +483,39 @@ goals.</p>
 
 
 
+<!-- script for toggling faq -->
+<script>
+  function toggleFAQ(element) {
+    const content = element.querySelector(".faq-content");
+    const allItems = document.querySelectorAll(".faq-item");
 
-  <script>
-    function toggleFAQ(element) {
-      const para = element.querySelector("p");
-      const isHidden = para.classList.contains("hidden");
-
-      document.querySelectorAll("div[onclick]").forEach(div => {
-        div.querySelector("p").classList.add("hidden");
-        // div.classList.remove("rounded-xl");
-        // div.classList.add("rounded-full");
-      });
-
-      if (isHidden) {
-        para.classList.remove("hidden");
-        // element.classList.remove("rounded-full");
-        // element.classList.add("rounded-xl");
+    allItems.forEach(item => {
+      const inner = item.querySelector(".faq-content");
+      if (item !== element) {
+        inner.style.maxHeight = null;
+        item.classList.remove("rounded-[35px]");
+        item.classList.add("rounded-full");
       }
+    });
+
+    const isExpanded = content.style.maxHeight;
+    if (!isExpanded) {
+      content.style.maxHeight = content.scrollHeight + "px";
+      element.classList.remove("rounded-full");
+      element.classList.add("rounded-[35px]");
+
+    } else {
+      content.style.maxHeight = null;
+      element.classList.remove("rounded-[35px]");
+      element.classList.add("rounded-full");
+
     }
-  </script>
+  }
+</script>
 
 
 
+  <!-- script for roataing testimonials section -->
 <script>
   const testimonials = [
     {
@@ -407,14 +526,14 @@ goals.</p>
       role: 'Head of Marketing'
     },
     {
-      bg: '/images/placeholder-bg.jpg',
+      bg: '/images/placeholder-bg-2.jpg',
       company: 'Canyon MTB Adventures',
       quote: 'We doubled our bookings in less than a month.',
       name: 'Elena Trevino',
       role: 'Growth Lead'
     },
     {
-      bg: '/images/placeholder-bg.jpg',
+      bg: '/images/placeholder-bg-3.jpg',
       company: 'Urban Coffee Roasters',
       quote: 'AdWave helps us reach caffeine lovers exactly when it matters.',
       name: 'Marcus Grant',
@@ -450,6 +569,123 @@ goals.</p>
 
   render();
 </script>
+
+
+  <!-- script to togle mini nav -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navItems = document.querySelectorAll(".nav-has-child");
+
+    navItems.forEach((item) => {
+      const dropdown = item.querySelector(".mini-header");
+      const link = item.querySelector("a");
+      const icon = item.querySelector("i");
+
+      // Hover to preview
+      item.addEventListener("mouseenter", () => {
+        closeAll();
+        dropdown.classList.remove("hidden");
+        link.classList.add("text-accent-mini");
+        icon.classList.add("text-accent-mini");
+      });
+
+      // Click to persist
+      item.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = !dropdown.classList.contains("hidden");
+        closeAll();
+        if (!isOpen) {
+          dropdown.classList.remove("hidden");
+          link.classList.add("text-accent-mini");
+          icon.classList.add("text-accent-mini");
+        }
+      });
+    });
+
+    function closeAll() {
+      document.querySelectorAll(".mini-header").forEach(el => el.classList.add("hidden"));
+      document.querySelectorAll(".nav-has-child a").forEach(a => a.classList.remove("text-accent-mini"));
+      document.querySelectorAll(".nav-has-child i").forEach(i => i.classList.remove("text-accent-mini"));
+    }
+
+    document.addEventListener("click", closeAll);
+  });
+</script>
+
+<!-- script for syncing the range and the prices -->
+<script>
+  const budgetRange = document.getElementById("budgetRange");
+  const budgetInput = document.getElementById("budgetInput");
+
+  const estimatedViewers = document.getElementById("estimatedViewers");
+  const dailyViewers = document.getElementById("dailyViewers");
+  const cpm = document.getElementById("cpm");
+  const trafficIncrease = document.getElementById("trafficIncrease");
+  const acquisitionIncrease = document.getElementById("acquisitionIncrease");
+  const campaignReach = document.getElementById("campaignReach");
+
+  function updatePricingMetrics(budget) {
+    const minBudget = 50;
+    const maxBudget = 1000000;
+    const ratio = (budget - minBudget) / (maxBudget - minBudget);
+
+    const currentViewersLower = 5000 + ratio * (500000 - 5000);
+    const currentViewersUpper = 30000 + ratio * (1000000 - 30000);
+    estimatedViewers.textContent = `${(currentViewersLower / 1000).toFixed(0)}k - ${(currentViewersUpper / 1000).toFixed(0)}k`;
+
+    const currentDailyLower = 150 + ratio * (5000 - 150);
+    const currentDailyUpper = 400 + ratio * (10000 - 400);
+    dailyViewers.textContent = `${Math.round(currentDailyLower).toLocaleString()} - ${Math.round(currentDailyUpper).toLocaleString()}`;
+
+    const currentCpmLower = 15 - ratio * 5;
+    const currentCpmUpper = 35 - ratio * 10;
+    cpm.textContent = `$${Math.round(currentCpmLower)} - $${Math.round(currentCpmUpper)}`;
+
+    const currentTraffic = 100 + ratio * (10000 - 100);
+    trafficIncrease.textContent = `${Math.round(currentTraffic).toLocaleString()}+ users`;
+
+    acquisitionIncrease.textContent = `475%`;
+
+    if (budget >= 500000) {
+      campaignReach.textContent = "Global";
+    } else if (budget >= 50000) {
+      campaignReach.textContent = "National";
+    } else if (budget >= 5000) {
+      campaignReach.textContent = "Regional";
+    } else {
+      campaignReach.textContent = "Local";
+    }
+  }
+
+  // Sync range to input
+  budgetRange.addEventListener("input", () => {
+    const val = parseInt(budgetRange.value);
+    budgetInput.value = "$ " + val.toLocaleString();
+    updatePricingMetrics(val);
+  });
+
+  // Sync input to range
+  budgetInput.addEventListener("input", () => {
+    let value = budgetInput.value.replace(/\D/g, "");
+    let num = parseInt(value);
+    if (isNaN(num) || num < 50) num = 50;
+    if (num > 1000000) num = 1000000;
+    budgetInput.value = "$ " + num.toLocaleString();
+    budgetRange.value = num;
+    updatePricingMetrics(num);
+  });
+
+  // Initial call
+  updatePricingMetrics(parseInt(budgetRange.value));
+</script>
+
+
+
+
+
+
+
+
 
 
   </body>
