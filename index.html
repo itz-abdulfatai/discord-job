@@ -134,7 +134,7 @@
     See how real businesses reached new audiences through TV advertising
   </h3>
 
-  <div class="flex flex-col md:flex-row gap-4 mt-3 px-5 md:px-10 lg:px-20 h-[323px]">
+  <div class="flex flex-col md:flex-row gap-4 mt-3 pl-5 md:pl-10 lg:pl-20 h-[323px]">
     <!-- Fixed Left Box -->
     <div class="bg-secondary text-white border-2 w-full md:w-[270px] py-[26px] px-8 rounded-[40px] flex flex-col gap-[58px]">
       <div class="flex justify-end gap-2">
@@ -142,10 +142,10 @@
         <i class='bx bxs-chevron-right-circle cursor-pointer' id="scrollRight"></i>
       </div>
 
-      <h3 class="text-2xl font-bold">Kaimuki Dental</h3>
-      <p class="text-xl -my-6 -mx-2 leading-[26px]">
-        Kaimuki Dental increased client volume 475% within 3 weeks of running their first ad with Adwave
-      </p>
+     <h3 class="text-2xl font-bold left-title">Kaimuki Dental</h3>
+<p class="text-xl -my-6 -mx-2 leading-[26px] left-desc">
+  Kaimuki Dental increased client volume 475% within 3 weeks of running their first ad with Adwave
+</p>
     </div>
 
     <!-- Scrollable Cards -->
@@ -153,9 +153,9 @@
       id="stories-scroll"
       class="flex-1 flex flex-row gap-4 overflow-x-auto overflow-y-hidden scroll-smooth"
     >
-      <div class="h-[323px] min-w-[920px] border-2 rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx.png);"></div>
-      <div class="h-[323px] min-w-[920px] border-2 rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx-2.png);"></div>
-      <div class="h-[323px] min-w-[920px] border-2 rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx.png);"></div>
+      <div class="h-[323px] min-w-[555px] border-2 rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx.png);"></div>
+      <div class="h-[323px] min-w-[555px] border-2 rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx-2.png);"></div>
+      <div class="h-[323px] min-w-[555px] border-2 rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx.png);"></div>
     </div>
   </div>
 </section>
@@ -721,11 +721,50 @@ goals.</p>
 
 <script>
   const scrollBox = document.getElementById("stories-scroll");
-  document.getElementById("scrollLeft").onclick = () =>
-    scrollBox.scrollBy({ left: -920, behavior: "smooth" });
-  document.getElementById("scrollRight").onclick = () =>
-    scrollBox.scrollBy({ left: 920, behavior: "smooth" });
+  const leftTitle = document.querySelector(".left-title");
+  const leftDesc = document.querySelector(".left-desc");
+
+  const cardWidth = 555;
+  let currentIndex = 0;
+
+  const texts = [
+    {
+      title: "Kaimuki Dental",
+      desc: "Kaimuki Dental increased client volume 475% within 3 weeks of running their first ad with Adwave"
+    },
+    {
+      title: "Farrow Harley- davidson",
+      desc: "Farrow Harley-Davidson has increased revenues by 150% since running ads with Adwave"
+    }
+  ];
+
+  function updateText(index) {
+    const data = texts[index];
+    if (data) {
+      leftTitle.textContent = data.title;
+      leftDesc.textContent = data.desc;
+    }
+  }
+
+  document.getElementById("scrollRight").onclick = () => {
+    currentIndex = (currentIndex + 1) % 2; // loop between 0 and 1
+    scrollBox.scrollTo({ left: currentIndex * cardWidth, behavior: "smooth" });
+    updateText(currentIndex);
+  };
+
+  document.getElementById("scrollLeft").onclick = () => {
+    currentIndex = (currentIndex - 1 + 2) % 2;
+    scrollBox.scrollTo({ left: currentIndex * cardWidth, behavior: "smooth" });
+    updateText(currentIndex);
+  };
+
+
+
+  // Init
+  updateText(currentIndex);
 </script>
+
+
 
 
 

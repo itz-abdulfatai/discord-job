@@ -73,7 +73,7 @@ body::-webkit-scrollbar {
 #stories-scroll {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 #stories-scroll::-webkit-scrollbar {
