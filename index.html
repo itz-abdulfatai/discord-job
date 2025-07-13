@@ -40,7 +40,7 @@
 
   <body class="text-secondary bg-[#fbf9fc]  font-roboto">
     <!-- Top header: Logo, Navigation and Auth buttons -->
-    <header class=" w-full h-10 gap-8 flex justify-between max-w-[1440px] mx-auto shadow px-8 pr-8 py-10 items-center  text-white sticky top-0 bg-white">
+    <header class=" w-full h-10 gap-8 flex justify-between max-w-[1440px] mx-auto shadow px-8 pr-10 py-10 items-center  text-white sticky top-0 bg-white">
         <img src="images/image.png" alt="logo" class="object-cover w-12">
         <nav class=" flex items-center flex-1 gap-7 max-md:hidden">
             <div class="relative nav-has-child text-sm">
@@ -128,34 +128,38 @@
     </section>
 
     <!-- Success stories cards -->
-    <section class=" flex max-md:text-center flex-col gap-4 ">
-      <h2 class="text-3xl sm:text-4xl font-bold max-md:text-center px-5 md:px-10 lg:px-20">Success stories</h2>
-      <h3 class="text-lg sm:text-xl px-5 md:px-10 lg:px-20">
-          See how real businesses reached new audiences through TV advertising
-        </h3>
+<section class="flex flex-col gap-4">
+  <h2 class="text-3xl sm:text-4xl font-bold px-5 md:px-10 lg:px-20">Success stories</h2>
+  <h3 class="text-lg sm:text-xl px-5 md:px-10 lg:px-20">
+    See how real businesses reached new audiences through TV advertising
+  </h3>
 
-      <div class="flex flex-col md:flex-row gap-4 mt-3 pl-5 md:pl-10 lg:pl-20">
-        <div class="h-[323px] bg-secondary text-white border-2 w-full md:w-[270px] py-[26px] px-8 rounded-[40px] flex flex-col gap-[58px]">
-          <div class="flex justify-end gap-2 ">
-            <i class='bx bxs-chevron-left-circle' ></i>
-            <i class='bx bxs-chevron-right-circle' ></i>
-          </div>
-
-          <h3 class="text-2xl font-bold">Kaimuki Dental</h3>
-          <p class="text-xl -my-6 -mx-2  leading-[26px]">Kaimuki Dental increased client volume 475% within 3 weeks of running their first ad with Adwave </p>
-        </div>
-        <div class=" md:overflow-x-auto overflow-y-auto md:overflow-y-visible flex-1 max-w-full max-h-[323px]  flex flex-col md:flex-row gap-4" id=" stories-scroll">
-
-          <div class="h-[323px]  border-2 w-full md:w-[920px] rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx.png);"></div>
-          <div class="h-[323px]  border-2 w-full md:w-[920px] rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx-2.png);"></div>
-          <div class="h-[323px]  border-2 w-full md:w-[920px] rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx.png);"></div>
-
-        </div>
-        <div class="h-[300px]  border-2 w-full md:w-[500px] rounded-3xl bg-center" style="background-image: url(images/cardx.png);"></div>
-        <div class="h-[300px] bg-secondary border-2 w-full md:w-[450px] rounded-3xl bg-center rounded-r-none" style="background-image: url(images/cardr.png);"></div>
+  <div class="flex flex-col md:flex-row gap-4 mt-3 px-5 md:px-10 lg:px-20 h-[323px]">
+    <!-- Fixed Left Box -->
+    <div class="bg-secondary text-white border-2 w-full md:w-[270px] py-[26px] px-8 rounded-[40px] flex flex-col gap-[58px]">
+      <div class="flex justify-end gap-2">
+        <i class='bx bxs-chevron-left-circle cursor-pointer' id="scrollLeft"></i>
+        <i class='bx bxs-chevron-right-circle cursor-pointer' id="scrollRight"></i>
       </div>
 
-    </section>
+      <h3 class="text-2xl font-bold">Kaimuki Dental</h3>
+      <p class="text-xl -my-6 -mx-2 leading-[26px]">
+        Kaimuki Dental increased client volume 475% within 3 weeks of running their first ad with Adwave
+      </p>
+    </div>
+
+    <!-- Scrollable Cards -->
+    <div
+      id="stories-scroll"
+      class="flex-1 flex flex-row gap-4 overflow-x-auto overflow-y-hidden scroll-smooth"
+    >
+      <div class="h-[323px] min-w-[920px] border-2 rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx.png);"></div>
+      <div class="h-[323px] min-w-[920px] border-2 rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx-2.png);"></div>
+      <div class="h-[323px] min-w-[920px] border-2 rounded-3xl bg-cover bg-center" style="background-image: url(images/cardx.png);"></div>
+    </div>
+  </div>
+</section>
+
 
     <!-- How it works section -->
       <section
@@ -223,7 +227,7 @@
       </section>
 
     <!-- Pricing estimator -->
-    <section class="px-5 flex flex-col md:flex-row max-md:mt-10 max-md:text-center  min-h-[550px] w-screen mx-auto">
+    <section id="pricing-estimator" class="px-5 flex flex-col md:flex-row max-md:mt-10 max-md:text-center  min-h-[550px]">
 
       <div class="w-full text-white flex flex-col gap-5 bg-pricingBg p-8 md:p-14 rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl">
 
@@ -715,6 +719,13 @@ goals.</p>
   })
 </script>
 
+<script>
+  const scrollBox = document.getElementById("stories-scroll");
+  document.getElementById("scrollLeft").onclick = () =>
+    scrollBox.scrollBy({ left: -920, behavior: "smooth" });
+  document.getElementById("scrollRight").onclick = () =>
+    scrollBox.scrollBy({ left: 920, behavior: "smooth" });
+</script>
 
 
 

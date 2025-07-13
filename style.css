@@ -14,6 +14,11 @@ img {
 }
 
 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
 /* Base styles for consistent size */
 .range-slider {
   appearance: none;
@@ -58,4 +63,19 @@ img {
   border: 2px solid #63babd;
   border-radius: 50%;
   cursor: grab;
+}
+
+/* #pricing-estimator, #pricing-estimator *  {
+    border: solid red;
+
+} */
+
+#stories-scroll {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  /* pointer-events: none; */
+}
+
+#stories-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
