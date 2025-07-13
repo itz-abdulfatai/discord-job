@@ -24,7 +24,7 @@
             primaryWhite: '#ffffff',
           },
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
+            roboto: ["Roboto", 'sans-serif'],
           },
         },
       },
@@ -32,16 +32,18 @@
   </script>
 
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-  <body class="text-secondary bg-[#fbf9fc]">
+  <body class="text-secondary bg-[#fbf9fc]  font-roboto">
     <!-- Top header: Logo, Navigation and Auth buttons -->
-    <header class=" w-full h-10 gap-10 flex justify-between max-w-[1440px] mx-auto shadow-md px-10 py-10 items-center  text-white ">
-        <img src="images/image.png" alt="logo" class="object-cover w-20">
-        <nav class=" flex flex-1 gap-5 max-md:hidden">
-            <div class="relative nav-has-child">
+    <header class=" w-full h-10 gap-8 flex justify-between max-w-[1440px] mx-auto shadow px-8 pr-8 py-10 items-center  text-white sticky top-0 bg-white">
+        <img src="images/image.png" alt="logo" class="object-cover w-12">
+        <nav class=" flex items-center flex-1 gap-7 max-md:hidden">
+            <div class="relative nav-has-child text-sm">
 
                 <a href="" class="font-semibold text-secondary">Product</a>
                 <i class='bx bx-chevron-down text-secondary font-bold'></i>
@@ -51,7 +53,7 @@
                   <a href="" class="px-5 py-1">News</a>
                 </div>
             </div>
-            <div class="relative nav-has-child">
+            <div class="relative nav-has-child text-sm">
 
                 <a href="" class="font-semibold text-secondary">Resources</a>
                 <i class='bx bx-chevron-down text-secondary font-bold'></i>
@@ -63,40 +65,55 @@
             </div>
             <div>
 
-                <a href="" class="font-semibold text-secondary">Pricing</a>
+                <a href="" class="font-semibold text-secondary text-sm hover:text-accent-mini">Pricing</a>
             </div>
         </nav>
-        <div class="flex gap-5 items-center">
-            <a href="" class="font-semibold text-secondary">Signup</a>
-            <button class="px-8 py-1 border border-secondary rounded-full bg-gradient-to-r from-gradient-x to-gradient-y ">login</button>
+        <div class="flex gap-5 items-center max-md:hidden text-sm">
+            <a href="" class="font-semibold text-secondary">Sign up</a>
+            <button class="px-8 py-1 border-[1.5px] border-secondary rounded-full bg-gradient-to-r from-gradient-x to-gradient-y text-secondary font-semibold ">log in</button>
+        </div>
+
+        <button id="nav-btn" class="text-secondary text-3xl md:hidden" id="navbar-toggle"><i class='bx bx-menu'></i></button>
+
+        <div id="mobile-nav" class=" flex flex-col max-md:hidden md:hidden shadow-lg bg-white absolute top-20 w-full left-0 right-0 py-3">
+          <a href="" class="text-secondary p-3 border-t border-[#22223950]">Product</a>
+          <a href="" class="text-secondary p-3 border-y border-[#22223950]">Resources</a>
+          <a href="" class="text-secondary p-3  border-[#22223950]">Pricing</a>
+          <a href="" class="font-semibold text-secondary p-3">Signup</a>
+            <button class="px-8 mx-3 py-1 border border-secondary rounded-full bg-gradient-to-r from-gradient-x to-gradient-y ">login</button>
         </div>
     </header>
     <!-- hero section  -->
-    <section class="flex flex-col md:flex-row justify-between h-screen mt-32 px-8 md:px-10 lg:px-14">
-      <div class="flex flex-col gap-10 max-md:text-center max-md:items-center md:w-[55%] ">
+    <section class="flex flex-col md:flex-row justify-between h-screen mt-[4rem] px-8 md:px-10 lg:px-20">
+      <div class="flex flex-col gap-10 max-md:text-center max-md:items-center md:w-[70%] ">
         <div class="flex items-center max-md:gap-5">
-          <img src="images/image.png" alt="" class="max-md:w-24">
-          <h1 class=" text-3xl md:text-5xl font-semibold">ADWAVE</h1>
+          <img src="images/hero-img.png" alt="" class="h-12">
+          <!-- <h1 class=" text-3xl md:text-5xl font-semibold">ADWAVE</h1> -->
         </div>
 
         <div class="flex flex-col gap-5  items-start max-md:items-center">
-          <h2 class="text-2xl md:text-4xl font-bold leading-[30px]">
+          <h2 class="text-2xl md:text-[3.2rem] font-bold leading-[68px] tracking-tight">
         Create and launch a TV ad in minutes for 
       </h2>
-      <span class="bg-yellow-300 px-2 text-2xl md:text-4xl font-bold">as little as $50</span>
+      <span class="bg-yellw py-2 text-2xl md:text-[3.2rem] font-bold leading-[50px] -mt-4 -translate-x-2">as little as $50</span>
 
-      <p class="text-md">
+      <p class="text-xl mt-3">
         Adwave creates your TV ad by analyzing the website and social media you give us, then you can air it with just a few clicks!
       </p>
 
-      <input type="text" class="w-full border-[1.5px] text-center border-secondary px-10 py-5 rounded-full outline-none placeholder:text-center" placeholder="Enter your website">
-      <button class="px-10 py-5 w-full rounded-full bg-transparent border-[1.5px] text-center border-secondary text-lg font-bold hover:bg-gradient-to-r from-gradient-x to-gradient-y">Create my ad</button>
+      <input type="text" class="w-full border-[1.5px] text-center border-secondary px-10 py-5 rounded-full outline-none placeholder:text-center mt-1 placeholder:text-xl" placeholder="Enter your website">
+     <button class="px-10 py-5 w-full rounded-full bg-transparent border-[1.5px] text-center border-secondary text-xl font-bold 
+  hover:bg-gradient-to-l hover:from-gradient-x hover:to-gradient-y 
+  active:bg-secondary active:from-none active:to-none active:bg-none active:text-white">
+  Create my ad
+</button>
+
 
         </div>
       </div>
       <div class="w-full flex justify-center items-center">
 
-        <img src="images/hero-1.png" class="w-full max-w-[450px] lg:max-w-[600px]" alt="">
+        <img src="images/hero-1.png" class="w-full max-w-[450px] lg:max-w-[630px] translate-x-12 -translate-y-14" alt="">
       </div>
     </section>
 
@@ -117,8 +134,8 @@
           See how real businesses reached new audiences through TV advertising
         </h3>
 
-      <div class="flex flex-col lg:flex-row gap-4 mt-6">
-        <div class="h-[300px] bg-secondary text-white border-2 w-[250px] p-4 rounded-3xl flex flex-col gap-5">
+      <div class="flex flex-col md:flex-row gap-4 mt-6">
+        <div class="h-[300px] bg-secondary text-white border-2 w-full md:w-[250px] p-4 rounded-3xl flex flex-col gap-5">
           <div class="flex justify-end gap-2 ">
             <i class='bx bxs-chevron-left-circle' ></i>
             <i class='bx bxs-chevron-right-circle' ></i>
@@ -127,8 +144,8 @@
           <h3 class="text-xl font-bold">Kaimuki Dental</h3>
           <p>Kaimuki Dental increased client volume 475% within 3 weeks of running their first ad with Adwave </p>
         </div>
-        <div class="h-[300px]  border-2 w-[500px] rounded-3xl bg-center" style="background-image: url(images/cardx.png);"></div>
-        <div class="h-[300px] bg-secondary border-2 w-[450px] rounded-3xl bg-center rounded-r-none" style="background-image: url(images/cardr.png);"></div>
+        <div class="h-[300px]  border-2 w-full md:w-[500px] rounded-3xl bg-center" style="background-image: url(images/cardx.png);"></div>
+        <div class="h-[300px] bg-secondary border-2 w-full md:w-[450px] rounded-3xl bg-center rounded-r-none" style="background-image: url(images/cardr.png);"></div>
       </div>
 
     </section>
@@ -201,7 +218,8 @@
     <!-- Pricing estimator -->
     <section class="px-5 flex flex-col md:flex-row max-md:mt-10 max-md:text-center  min-h-[550px] w-screen mx-auto">
 
-      <div class="w-full text-white flex flex-col gap-5 bg-pricingBg p-8 md:p-14 rounded-top-3xl md:rounded-top-0 md:rounded-l-3xl">
+      <div class="w-full text-white flex flex-col gap-5 bg-pricingBg p-8 md:p-14 rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl">
+
       <h2 class="text-3xl font-bold "> Pricing tailored to you </h2>
       <p>
          You can start advertising for as little as $50, with flexible budgets tailored to meet your marketing goals. Use the slider below to see how much more you could be doing with your advertising budget. 
@@ -293,7 +311,7 @@
     </section>
 
         <!-- FAQ section -->
-     <section class=" mx-auto flex flex-col sm:flex-row gap-8 min-h-[70vh] p-20">
+     <section class=" mx-auto flex flex-col sm:flex-row gap-8 md:min-h-[70vh] p-5 md:p-20">
     <div class="sm:w-1/3">
       <h2 class="text-3xl font-bold leading-snug mb-2">Frequently Asked<br/>Questions</h2>
       <a href="#" class="text-lg font-semibold mt-4 inline-flex items-center hover:text-yellw transition-all gap-5 group">
@@ -328,9 +346,9 @@
   </section>
 
     <!--  Content highlights -->
-    <section class="px-5 md:px-10 lg:px-14 flex flex-col gap-10 border py-20">
+    <section class="px-5 md:px-10 lg:px-14 flex flex-col gap-10  py-20">
       <div class="flex justify-between">
-      <h2 class="text-3xl font-bold ">Success stories</h2>
+      <h2 class="text-3xl font-bold ">Resources</h2>
       <div class="flex items-center gap-3 group transition-all">
         <h2 class="text-2xl  font-bold group-hover:text-yellw transition-all">Learn more</h2>
             <i class='bx bxs-chevron-right-circle text-secondary text-xl group-hover:text-yellw transition-all group-hover:translate-x-1' ></i>
@@ -341,7 +359,7 @@
       </div>
 
 
-      <div class="flex justify-around gap-5">
+      <div class="flex flex-col md:flex-row justify-around gap-5">
         <div class="w-full h-[200px] border-2 rounded-3xl group border-secondary min-h-[350px] hover:border-accent-mini hover:border-4 transition-all flex flex-col p-8 gap-5">
           <div class="flex gap-5 items-center">
             <img src="images/lx-1.png" class="h-[50px]" alt="">
@@ -380,23 +398,23 @@ goals.</p>
 
     </section>
       <!-- Testimonials section -->
-    <section class="p-20 bg-[#f9f8fc] font-sans">
-  <h2 class="text-4xl font-extrabold mb-10 leading-tight">Testimonials</h2>
+    <section class="p-5 md:p-20 bg-[#f9f8fc]">
+  <h2 class="text-4xl max-md:text-center font-extrabold mb-10 leading-tight">Testimonials</h2>
 
   <!-- Card wrapper -->
   <div id="testimonialCard"
-       class="relative w-full h-[380px] rounded-3xl overflow-hidden shadow-lg transition-all duration-500 bg-center bg-cover">
+       class="relative w-full h-[380px] rounded-3xl overflow-hidden shadow-lg transition-all duration-500 bg-center bg-cover max-md:flex max-md:justify-center max-md:items-center">
 
     <!-- Glass overlay -->
     <div
-      class="absolute right-6 top-1/2 -translate-y-1/2 sm:w-[45%] w-full bg-white/30 backdrop-blur-lg rounded-3xl p-8 sm:p-10">
+      class="md:absolute right-6 md:top-1/2 md:-translate-y-1/2 sm:w-[45%] w-[90%] bg-white/30 backdrop-blur-lg rounded-3xl p-8 sm:p-10">
       <!-- Arrows -->
       <div class="absolute top-4 right-4 flex gap-3">
         <i id="prevBtn" class='bx bxs-chevron-left-circle text-3xl cursor-pointer hover:scale-110 transition text-secondary'></i>
         <i id="nextBtn" class='bx bxs-chevron-right-circle text-3xl cursor-pointer hover:scale-110 transition text-secondary'></i>
       </div>
 
-      <h3 id="company" class="text-3xl font-extrabold leading-snug"></h3>
+      <h3 id="company" class="text-3xl font-extrabold leading-snug "></h3>
 
       <p id="quote" class="mt-6 mb-8 text-lg sm:text-xl leading-relaxed"></p>
 
@@ -409,15 +427,13 @@ goals.</p>
 
   <!-- site footer -->
     <footer class="flex flex-col mt-32 px-5 md:px-10 lg:px-14">
-<div class="flex justify-around pb-10">
+<div class="flex flex-col md:flex-row max-md:text-center max-md:gap-10 max-md:flex-wrap justify-around pb-10">
   <div>        
-      <div class="flex items-center gap-5">
+      <div class="flex flex-col md:flex-row items-center gap-5">
           <img src="images/image.png" class="h-50" alt="">
           <h1 class="text-2xl font-semibold">ADWAVE</h1>
         </div></div>
-  <div>
 
-  </div>
   <div class="flex flex-col gap-5">
     <h4 class="text-xl font-bold">Product</h4>
     <a href="" class=" capitalize">What is Adwave</a>
@@ -527,14 +543,14 @@ goals.</p>
     },
     {
       bg: '/images/placeholder-bg-2.jpg',
-      company: 'Canyon MTB Adventures',
+      company: 'Canyon MTB Adventures',
       quote: 'We doubled our bookings in less than a month.',
       name: 'Elena Trevino',
       role: 'Growth Lead'
     },
     {
       bg: '/images/placeholder-bg-3.jpg',
-      company: 'Urban Coffee Roasters',
+      company: 'Urban Coffee Roasters',
       quote: 'AdWave helps us reach caffeine lovers exactly when it matters.',
       name: 'Marcus Grant',
       role: 'Co‑Founder'
@@ -682,7 +698,15 @@ goals.</p>
 
 
 
+<script>
+  const navBtn = document.querySelector("#nav-btn")
+  const mobileNav = document.querySelector("#mobile-nav")
 
+
+  navBtn.addEventListener('click', ()=> {
+    mobileNav.classList.toggle('max-md:hidden')
+  })
+</script>
 
 
 
